@@ -1,0 +1,66 @@
+.portfolio {
+    padding-top: 126px;
+
+    &__cards {
+        padding-top: 60px;
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        grid-auto-rows: 280px;
+        gap: 5px;
+        justify-content: center;
+
+        .first-hor {
+            grid-column: 2/4;
+            grid-row: 1/2;
+        }
+        .sec-hor {
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+        .first-ver {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        .sec-ver {
+            grid-column: 4/5;
+            grid-row: 1/3;
+        }
+    }
+    &__card {
+        width: 100%;
+        position: relative;
+        display: block;
+        background-color: $black;
+        cursor: pointer;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: all 300ms ease-out;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        span {
+            position: absolute;
+            top: -450px;
+            left: -122px;
+            background-color: #fff;
+            opacity: 0.5;
+            width: 100px;
+            height: 900px;
+            transform: rotate(45deg);
+            transition: all 0s;
+        }
+        &:hover {
+            span {
+                top: 0px;
+                left: 430px;
+                transition: all 500ms;
+            }
+        }
+    }
+}

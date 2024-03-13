@@ -1,0 +1,381 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .aboutMe {
+        &__info {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, auto));
+            gap: 30px;
+            padding: 0;
+        }
+        #photo {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        #introduction {
+            grid-column: 2/4;
+            grid-row: 1/2;
+        }
+        #wrapper {
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            padding: 40px 10px 0 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 60px;
+        }
+    }
+
+    .skills {
+        &__items {
+            padding: 40px 10px 0 10px;
+            grid-template-columns: repeat(3, 270px);
+            gap: 13px;
+            justify-content: center;
+        }
+    }
+
+    .portfolio {
+        padding-top: 80px;
+        &__cards {
+            padding-top: 40px;
+            grid-template: repeat(2, 200px) / repeat(4, 200px);
+            grid-auto-rows: 200px;
+            justify-content: center;
+        }
+    }
+
+    .contacts {
+        padding: 120px 0 50px 0;
+        &__info {
+            grid-template-columns: 300px 485px;
+            justify-content: space-between;
+    
+            padding: 0 48px 0 48px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title {
+        &_fs36 {
+            font-size: 30px;
+        }
+    }
+    .aboutMe {
+        #photo {
+            grid-row: 1/2;
+        }
+        #wrapper {
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 40px 30px 0 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 60px;
+        }
+    }
+
+    .skills {
+        &__items {
+            padding: 40px 10px 0 10px;
+            grid-template-columns: repeat(2, 270px);
+            gap: 13px;
+            justify-content: center;
+        }
+        &__progress {
+            padding-top: 40px;
+            display: grid;
+            grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 350px);
+            column-gap: 40px;
+            row-gap: 45px;
+        }
+    }
+
+    .portfolio {
+        &__cards {
+            grid-template: repeat(2, 280px) / repeat(2, 280px);
+            grid-auto-rows: 280px;
+
+            .first-hor {
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+            .sec-hor {
+                grid-column: 1/3;
+                grid-row: 2/3;
+            }
+            .first-ver {
+                grid-column: 1/2;
+                grid-row: 3/5;
+            }
+            .sec-ver {
+                grid-column: 2/3;
+                grid-row: 3/5;
+            }
+        }
+    }
+
+    .price {
+        padding-top: 66px;
+    
+        &__items {
+            padding-top: 20px;
+            display: grid;
+            grid-template: repeat(2, 44px) / 700px;
+            justify-content: center;
+            row-gap: 15px;
+        }
+    }
+
+    .contacts {
+        padding: 40px 0 50px 0;
+        &__info {
+            grid-template-columns: 700px;
+            justify-content: center;
+    
+            padding: 0;
+        }
+        &__photo {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title {
+        &_fs36 {
+            font-size: 24px;
+        }
+        &_fs48 {
+            font-size: 28px;
+        }  
+    }
+    .promo {
+        &__title {
+            line-height: 39px;
+            width: 300px;
+        }
+    }
+    .aboutMe {
+        &__info {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(150px, auto));
+        }
+        #photo {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        #introduction {
+            grid-column: 2/3;
+        }
+        #wrapper {
+            grid-column: 1/3;
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 40px 10px 0 10px;
+        }
+    }
+
+    .skills {
+        &__items {
+            padding: 40px 10px 0 10px;
+            grid-template-columns: repeat(2, 270px);
+            gap: 13px;
+            justify-content: center;
+        }
+        &__progress {
+            padding-top: 40px;
+            grid-template: repeat(2, minmax(70px, auto)) / 1fr;
+            row-gap: 45px;
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    .portfolio {
+        padding-top: 40px;
+        &__cards {
+            grid-template: repeat(2, auto) / repeat(2, 250px);
+            grid-auto-rows: auto;
+        }
+    }
+
+    .price {
+        padding-top: 40px;
+        &__items {
+            grid-template: repeat(2, 44px) / 500px;
+        }
+    }
+
+    .contacts {
+        &__info {
+            grid-template-columns: 500px;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .title {
+        &_fs48 {
+            font-size: 26px;
+        }
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 100%;
+            padding-left: 20px;
+        }
+    }
+    .promo {
+        background: url('../img/main_bg2.jpg') no-repeat 62%/cover;
+        &__btns {
+            margin-top: 32px;
+        }
+    }
+
+    .aboutMe {
+        padding-top: 40px;
+        &__info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            grid-auto-rows: 1fr;
+            gap: 0;
+            row-gap: 30px;
+        }
+        &__photo {
+            max-width: 100%;
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: 50% 10%;
+            }
+        }
+        #photo {
+            grid-column: unset;
+            grid-row: unset;
+        }
+        #introduction {
+            grid-column: unset;
+            grid-row: unset;
+        }
+        #wrapper {
+            grid-column: unset;
+            grid-row: unset;
+            display: flex;
+            flex-direction: column;
+    
+            #mobile {
+                grid-column: unset;
+                grid-row: unset;
+            }
+        }
+    }
+
+    .skills {
+        &__items {
+            padding: 40px 0 0 0;
+            grid-template-columns: repeat(1, 270px);
+            gap: 13px;
+            justify-content: center;
+        }
+    }
+
+    .portfolio {
+        padding-top: 40px;
+        &__cards {
+            grid-template: repeat(2, auto) / repeat(2, 150px);
+            grid-auto-rows: auto;
+        }
+    }
+
+    .price {
+        &__items {
+            grid-template: repeat(2, 44px) / 300px;
+        }
+    }
+
+    .contacts {
+        &__info {
+            grid-template-columns: 300px;
+        }
+        &__form {
+            margin-top: 20px;
+            grid-template: 45px 45px 140px 90px / 1fr;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__textarea {
+            grid-column: 1/2;
+        }
+        &__triggers {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            grid-column: 1/2;
+            gap: 0;
+        }
+        &__btn {
+            width: 100%;
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+        &__policy {
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

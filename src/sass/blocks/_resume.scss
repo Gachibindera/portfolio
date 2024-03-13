@@ -1,0 +1,97 @@
+.resume {
+    padding-top: 140px;
+
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 135px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                border-radius: 100%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    top: -8px;
+                    background: $white;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: '';
+            top: 48px;
+            position: absolute;
+            height: 1px;
+            width: 45px;
+            background: $white;
+        }
+        &-head {
+            position: relative;
+            padding: 25px 0 0 100px;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+        }
+        &-icon {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            @include before_circle;
+
+            img {
+                position: absolute;
+                left: 18px;
+                top: 15px;
+            }
+        }
+
+        &-descr {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        &-body p {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.skills {
+    padding-top: 120px;
+
+    &__items {
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+    }
+    &__item {
+        width: 270px;
+        padding: 30px;
+        background-color: $gray-bg;
+        box-shadow: 5px 5px 0px rgba(76, 76, 76, 0.3);
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            transform: translate(5px, 5px);
+            box-shadow: none;
+
+        }
+    }
+    &__img {
+        height: 65px;
+        display: flex;
+
+        img {
+            align-self: center;
+        }
+    }
+    &__title {
+        padding-top: 20px;
+    }
+    &__text {
+        padding-top: 15px;
+        font-size: 12px;
+    }
+
+
+
+    &__progress {
+        padding-top: 128px;
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 350px);
+        grid-auto-rows: minmax(70px, auto);
+        column-gap: 80px;
+        row-gap: 45px;
+        justify-content: center;
+
+        &_item {
+            display: grid;
+            grid-template: 21px 14px / 200px 35px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &_title {
+            display: block;
+            position: relative;
+            padding: 2px 0 0 14px;
+            @include before_circle;
+        }
+        &_percent {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &_line {
+            width: 100%;
+            height: 14px;
+            background-color: $gray-bg;
+            border-radius: 4px;
+            grid-column: 1/3;
+
+            span {
+                display: block;
+                background-color: $main-color;
+                height: 100%;
+                border-radius: 4px;
+            }
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
